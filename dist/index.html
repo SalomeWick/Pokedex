@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>POKEDEX</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="h-screen bg-black">
+        <div class="max-w-sm mx-auto">
+            <div>
+                <img class="h-screen animate-pulse" src="img/International_Pokémon_logo.svg" alt="pokemonlogo">
+            </div>
+        </div>
+    </div>
+
+    <div class="h-screen bg-fixed bg-cover bg-center" style="background-image:url('img/PokeBg.png')">
+        <div>What's your pokemon?</div>
+        <div class="max-w-sm mx-auto pt-60 font-mono">
+            <div class="p-6 bg-blue-50 bg-opacity-50 rounded-xl shadow-2xl flex items-center space-x-4">
+                <div class="flex-shrink-0">
+                    <input id="input-id" placeholder="Select your Pokemon" type="text" class="bg-transparent placeholder-gray-600 focus:placeholder-gray-400 focus:outline-none cursor-text">
+                    <label for="input-id" class=""></label>
+                </div>
+                <button id="submit-button" class="focus:outline-none" type="submit ">
+                    <img class="h-20 w-20" src="img/Poké_Ball_icon.svg" alt="pokeball">
+                </button>
+            </div>
+            <div class="text-center font-extrabold uppercase max-w-sm mx-auto flex bg-gray-100 rounded-xl p-8 md:p-0">
+                <div class="flex-shrink-0">
+                    <p class="" id="pokemon-name"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const input = document.getElementById("input-id");
+        input.addEventListener("keypress", function onEvent(event) {
+            if (event.key === "Enter") {
+                document.getElementById("submit-button").click();
+            }
+        })
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
